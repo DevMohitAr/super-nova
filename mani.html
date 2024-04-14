@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link
+       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+       rel="stylesheet"
+     />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+
+  <body class="">
+    <div class="main-div flex flex-col items-center justify-center h-[100vh] ">
+      <div class="wrapper border-[rgba(255,255,255,0.1)] border-2 w-[350px] h-[auto]  p-4 text-center font-[Archivo, sans-serif] text-white bg-[#2a2a2a] rounded-md">
+        <h1 class="text-3xl font-bold pt-3 pb-5">SuperNova</h1>
+        <h3 class="text-2xl font-bold mb-3">Welcome Back</h3>
+        <div class="border-[rgba(255,255,255,0.2)] p-2 border-2 flex items-center justify-center gap-3 rounded-md my-4">
+          <span class="fa-brands fa-google "></span>
+          <p>Sign in with Google</p>
+        </div>
+
+        <div class="border-[rgba(255,255,255,0.2)] p-2 border-2 flex items-center justify-center gap-3 rounded-md my-4">
+          <span class="fa-brands fa-facebook "></span>
+          <p>Sign in with Facebook</p>
+        </div>
+
+        <div class="flex justify-center items-center gap-2">
+          <span class="w-[100%] h-[.5px] bg-white"></span>
+          <p>OR</p>
+          <span class="w-[100%] h-[.5px] bg-white"></span>
+        </div>
+
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Your email"
+          class="bg-[#3a3a3a] w-[100%] rounded-md p-3 outline-none border-none outline-[gray] my-4"
+        />
+
+        <div class="password relative flex justify-center items-center">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Your password"
+            class="bg-[#3a3a3a] w-[100%] rounded-md p-3 outline-none border-none outline-[gray] my-4 relative"
+          />
+          <span class="fa-solid fa-eye absolute right-3"></span>
+        </div>
+
+        <p class="text-right my-2 text-yellow-500 font-bold">
+          forgot password?
+        </p>
+
+        <div class="button flex items-center relative">
+          <button
+            type="button"
+            class="btn bg-[#6a6a6a] w-[100%] p-3 rounded-md text-[gray] font-bold text-xl mt-3 mb-5"
+          >
+            Let's go
+          </button>
+          <span class="fa-solid fa-circle-right absolute right-[30%] pb-[5px]"></span>
+        </div>
+
+        <p class="signup text-right font-bold">
+          Not on SuperNova?
+          <span class="text-yellow-500 font-bold">Sign up Now</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

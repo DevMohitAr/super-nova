@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Archivo:ital,wght@0,100..900;1,100..900&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* font-family: "Roboto Slab", serif; */
+/* font-family: "Archivo", sans-serif; */
+/* font-family: "Exo ", sans-serif; */
+/* font-family: "Montserrat Alternates", sans-serif; */
+/* font-family: "Advent Pro", sans-serif; */
+:root {
+  --border-mix: linear-gradient(90deg, rgb(146, 15, 15), rgb(68, 68, 188));
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.custom-font {
+  font-family: 'Exo', sans-serif;
+}
+.custom-font1 {
+  font-family: 'Archivo', sans-serif;
+}
+body {
+  font-family: "Exo", sans-serif;
+  height: 100%;
+}
+html {
+  height: 100%;
+}
+.hero {
+  background: url("../src/assets/hero.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.set {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.abc {
+  position: relative;
+  padding: 0.5em 1em;
+
+  background-color: transparent;
+  border-color: transparent;
+
+  z-index: 1;
+}
+
+.abc::before {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+ 
+
+  z-index: -1;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: all 400ms ease-in-out;
+}
+
+.abc:hover::before {
+  transform: scaleX(1);
+  opacity: 1;
+}
+.abc:hover {
+  
+  border-color: white;
+}
+
+.abc2 {
+  position: relative;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  background-color: transparent;
+  border-color: transparent;
+
+  z-index: 1;
+}
+.abc2::before {
+  content: "";
+  opacity: 0;
+  border-radius: 8px;
+  position: absolute;
+  inset: 0;
+  background-color: rgb(1, 4, 23);
+  z-index: -1;
+
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: all 400ms ease-in-out;
+}
+
+.abc2:hover::before {
+  transform: scaleX(1);
+  opacity: 1;
+}
+.abc2:hover {
+  border-color: gray;
+}
+
+.mani {
+  will-change: transform;
+}
+
+.wrapper {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.bg-1 {
+  background-color: #232323;
+}
+.bg-2 {
+  background-color: #1e1e1e;
+}
+.text-2 {
+  color: #ffffff;
+}
+
+.bnew {
+  border: 3px solid transparent;
+  border-image: linear-gradient(90deg, rgb(146, 15, 15), rgb(68, 68, 188)) 1; /* Apply gradient as border */
+  border-image-slice: 1; /* Ensure the whole border is filled */
+}
+.eee {
+  background: linear-gradient(
+    260deg,
+    rgba(58, 58, 58, 0.2),
+    rgba(90, 90, 90, 0.2)
+  );
+}
+
+.eee2 {
+  background: linear-gradient(
+    260deg,
+    rgba(58, 58, 58, 0.1),
+    rgba(90, 90, 90, 0.2)
+  );
+}
+
+.eee3 {
+  background: linear-gradient(
+    260deg,
+    rgba(58, 58, 58, 0.6),
+    rgba(90, 90, 90, 0.4)
+  );
+}
+
+.box {
+  box-shadow: inset 2px 2px 8px rgb(77, 24, 77);
+}
+
+.box2 {
+  box-shadow: inset 2px 2px 8px rgb(20, 19, 20);
+}
+
+.box3 {
+  box-shadow: inset -2px -2px 8px rgb(74, 73, 74);
+}
+
+.mine {
+  animation-name: fadein;
+  animation-duration: 1s;
+
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+
+.mine2 {
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein2 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.mmm {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.mm{
+  -webkit-text-fill-color:transparent;
+ background-image:linear-gradient(90deg,#bdc293,#908e95 100%,#cce47f) ; 
+ -webkit-background-clip:text;
+ background-clip: text;
+}
+/* .bbc{
+  background-image: url(https://lp.simplified.com/607f32d6309ca31d63c6724d/65e0488c75c3da45c3376906_aw-waves-left.svg),url(https://lp.simplified.com/607f32d6309ca31d63c6724d/65d03a2b3272ec0a13ce4537_right-small-wavs.svg);
+} */
+.text-gradient {
+  background-image: linear-gradient(to right, lightgray 0%, rgba(255, 255, 255, 0.8) 100%);
+  /* Adjust colors and direction as desired */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
