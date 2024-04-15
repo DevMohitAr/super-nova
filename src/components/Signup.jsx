@@ -99,7 +99,9 @@ export default function Signup() {
             >
               Driving the Future of Business Intelligence{" "}
             </motion.h1>
-            <h2 className="text-2xl italic font-semibold custom-font1 ">Powered By Ai</h2>
+            <h2 className="text-2xl italic font-semibold custom-font1 ">
+              Powered By Ai
+            </h2>
             <motion.p className="text-2xl mb-7" variants={headVariants}>
               {/* Harness The Power of Data, With our Domain-Specific AI agents{" "} */}
             </motion.p>
@@ -149,6 +151,7 @@ export default function Signup() {
             xmlns="http://www.w3.org/2000/svg"
           >
             <motion.path
+              strokeWidth={1}
               initial={{ pathLength: 0 }}
               animate={isInView && { pathLength: 1 }}
               transition={{ duration: 3, delay: 1 }}
@@ -157,6 +160,7 @@ export default function Signup() {
               fill="none"
             />
             <motion.path
+              strokeWidth={4}
               initial={{ pathLength: 0 }}
               animate={isInView1 && { pathLength: 1 }}
               transition={{ duration: 4, delay: 2 }}
