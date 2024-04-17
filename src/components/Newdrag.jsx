@@ -3,7 +3,8 @@ import { FaArrowLeft } from "react-icons/fa";
 import { IoIosChatboxes } from "react-icons/io";
 import { GiSailboat } from "react-icons/gi";
 import { BsFillWebcamFill } from "react-icons/bs";
-
+import { ImCross } from "react-icons/im";
+import { RxCross2 } from "react-icons/rx";
 import React from "react";
 export const Newdrag = ({
   bottomBoxContent,
@@ -163,7 +164,7 @@ export const Newdrag = ({
                 </div>
                 <Link
                   to="/select"
-                  className={`text-center px-4 py-2 w-[270px] text-2xl abc2 absolute bottom-10 ml-[10%] ${
+                  className={`text-center px-4 py-2 w-[270px] text-2xl abc2 absolute bottom-10 ml-[100px] ${
                     bottomBoxContent.length >= 1
                       ? "border-gray-200  border-2 "
                       : ""
@@ -174,14 +175,23 @@ export const Newdrag = ({
               </div>
 
               <div className=" eee2 px-8  py-6  flex-1 text-gray-50 border-gray-700 border-2">
-                <div className="flex gap-4  items-center ">
-                  <input
-                    type="text"
-                    placeholder="Label here..."
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    className="w-full  text-gray-500 eee2 rounded-md p-3 "
-                  />
+                <div className="flex gap-4  items-center  ">
+                  <div className="relative w-full">
+                    <input
+                      type="text"
+                      placeholder="Label here..."
+                      value={query}
+                      onChange={(e) => setQuery(e.target.value)}
+                      className="w-full  text-gray-500 eee2 rounded-md p-3 "
+                    />
+                    {query.length>=1?<button
+                      onClick={() => setQuery("")}
+                      className="absolute right-10 top-4 text-gray-300 text-xl"
+                    >
+                      <RxCross2 />
+                    </button>:''}
+                  </div>
+
                   <span className="text-2xl border-2 border-gray-600 text-gray-400 p-2 abc2">
                     Search
                   </span>
@@ -273,7 +283,7 @@ export const Newdrag = ({
                   onDrop={(e) => handleDrop(e, "start-box")}
                 >
                   {query.length >= 1 ? (
-                    <div className="flex gap-10 flex-wrap min-w-[280px] flex-1 ">
+                    <div className="flex gap-10 flex-wrap min-w-[280px] flex-1 justify-center ">
                       {boxes1
                         .filter((box) => {
                           return box.desc.includes(query.toLowerCase());
@@ -335,7 +345,7 @@ export const Newdrag = ({
                         })}
                     </div>
                   ) : (
-                    <div className="flex flex-wrap gap-16 flex-1  ">
+                    <div className="flex flex-wrap gap-16 flex-1 justify-center ">
                       {boxes1?.map((box, j) => (
                         <div
                           key={j}

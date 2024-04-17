@@ -40,6 +40,9 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: white;
+  
+
 }
 .abc {
   position: relative;
@@ -104,9 +107,7 @@ html {
   border-color: gray;
 }
 
-.mani {
-  will-change: transform;
-}
+
 
 .wrapper {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);

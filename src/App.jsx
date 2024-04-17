@@ -7,13 +7,14 @@ import Login from "./components/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import VideoBackground from "./components/VideoBackground";
 import { Newdrag } from "./components/Newdrag";
+import SignNew from "./components/SignNew";
 
 function App() {
   const [name, setName] = React.useState("");
   const [boxes, setBoxes] = React.useState([
     {
       id: "box1",
-      text: "Consult AI-Knowledge Management",
+      text: "Consult AI-Knowledge Management ",
       desc: "Enpowering Decisions,Simplifying Solutions - Your AI-Powered Knowledge Partner",
       content: "chat",
     },
@@ -43,26 +44,27 @@ function App() {
       id: "box2",
       text: "Consult AI-Knowledge Generator",
       desc: "Minutes to Mastery:Revolutionizing Business Documents creation with AI Speed and Precision consult ai-knowledge generator knowledge generation",
-      content: "email",
+      content: "risk",
       color: "border-orange-400",
       bgColor: "bg-orange-400",
     },
     {
       id: "box3",
+      text: "IGenius AI Marketing",
+      desc: "Hyper-Customized, AI-Powered:Crafting Unique Customer Content at Scale igenius ai marketing",
+      content: "email",
+      color: "border-green-500",
+      bgColor: "bg-green-500",
+    },
+    {
+      id: "box4",
       text: "Consult AI- Executive Insights",
       desc: "Instant Intelligence, Enduring Edge:Empower Your Decisions with AI-Driven Insights consult ai- executive insights data insights dashboard summarize vendor comparison scope generation",
       content: "risk",
       color: "border-blue-400",
       bgColor: "bg-blue-400",
     },
-    {
-      id: "box4",
-      text: "IGenius AI Marketing",
-      desc: "Hyper-Customized, AI-Powered:Crafting Unique Customer Content at Scale igenius ai marketing",
-      content: "risk",
-      color: "border-green-500",
-      bgColor: "bg-green-500",
-    },
+
     {
       id: "box5",
       text: "Consult AI - Social Media Tracker",
@@ -97,7 +99,7 @@ function App() {
     <BrowserRouter>
       <VideoBackground />
       <Routes>
-        <Route path="/" element={<Signup />} />
+        <Route path="/" element={<SignNew />} />
         <Route
           path="/login"
           element={<Login name={name} setName={setName} />}
@@ -132,6 +134,7 @@ function App() {
             <SelectedBox bottomBoxContent={bottomBoxContent} name={name} />
           }
         />
+        <Route path="/ss" element={<SignNew />} />
       </Routes>
     </BrowserRouter>
   );
