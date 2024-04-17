@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion, useInView, useAnimation, animate } from "framer-motion";
+import SvgComponent from "./SvgComponent";
 
 export default function Signup() {
   const ref = React.useRef();
@@ -71,10 +72,13 @@ export default function Signup() {
   return (
     <div>
       <main className=" relative w-screen h-screen overflow-hidden bbc ">
-        <div className="absolute h-screen w-screen brightness-[60%]">
+        {/* <div className="absolute h-screen w-screen brightness-[60%]">
           <video autoPlay loop muted>
             <source src="../src/assets/video1.mp4" />
           </video>
+        </div> */}
+        <div className="h-full w-full">
+          <SvgComponent className="h-full w-full"/>
         </div>
         <motion.section
           className=" h-full  text-white  "
@@ -109,7 +113,7 @@ export default function Signup() {
             animate="animate"
           >
             <motion.h1
-              className=" mb-3 text-[48px] custom-font"
+              className="head mb-3 text-[48px] custom-font"
               variants={headVariants}
             >
               Driving the Future of Business Intelligence{" "}
