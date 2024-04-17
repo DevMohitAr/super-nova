@@ -7,28 +7,25 @@ import { IoIosChatboxes } from "react-icons/io";
 import { GiSailboat } from "react-icons/gi";
 import { BsFillWebcamFill } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
-import {motion} from 'framer-motion';
+import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 export default function SelectedBox({ bottomBoxContent, name }) {
   const [selectedBox, setSelectedBox] = React.useState(null);
-  const [show,setShow] = React.useState(true);
-  
-   const textVariants = {
-     initial: {
-       opacity: 0,
-     
-     },
-     animate: {
-       opacity: 0.9,
-       
+  const [show, setShow] = React.useState(true);
 
-       transition: {
-         duration: 5,
-         staggerChildren: 0.1,
-         
-       },
-     },
-   };
+  const textVariants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 0.9,
+
+      transition: {
+        duration: 5,
+        staggerChildren: 0.1,
+      },
+    },
+  };
   return (
     <main className="relative grid grid-rows-[auto_1fr] h-screen w-screen p-6 gap-3 ">
       <video className="absolute brightness-[50%] h-screen " loop muted>

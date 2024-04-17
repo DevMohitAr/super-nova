@@ -8,6 +8,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import VideoBackground from "./components/VideoBackground";
 import { Newdrag } from "./components/Newdrag";
 import SignNew from "./components/SignNew";
+import {MobileNewdrag} from "./components/MobileNewdrag";
+import Comp1 from "./components/Comp1";
+import { AppProvider } from "./components/Provider";
 
 function App() {
   const [name, setName] = React.useState("");
@@ -95,48 +98,82 @@ function App() {
     { text: "RFP", id: "IGenius AI Marketing" },
     { text: "Scope Generation", id: "IGenius AI Marketing" },
   ]);
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const updateIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    updateIsMobile(); // Set initial state
+
+    window.addEventListener("resize", updateIsMobile);
+
+    return () => {
+      window.removeEventListener("resize", updateIsMobile);
+    };
+  }, []);
   return (
-    <BrowserRouter>
-      <VideoBackground />
-      <Routes>
-        <Route path="/" element={<SignNew />} />
-        <Route
-          path="/login"
-          element={<Login name={name} setName={setName} />}
-        />
-        <Route
-          path="/drag"
-          element={
-            <Drag
-              boxes={boxes}
-              bottomBoxContent={bottomBoxContent}
-              setBoxes={setBoxes}
-              setBottomBoxContent={setBottomBoxContent}
+    <AppProvider>
+      <BrowserRouter>
+        <VideoBackground />
+        <Routes>
+          <Route path="/" element={<SignNew />} />
+          <Route
+            path="/login"
+            element={<Login name={name} setName={setName} />}
+          />
+          <Route
+            path="/drag"
+            element={
+              <Drag
+                boxes={boxes}
+                bottomBoxContent={bottomBoxContent}
+                setBoxes={setBoxes}
+                setBottomBoxContent={setBottomBoxContent}
+              />
+            }
+          />
+          {isMobile ? (
+            <Route
+              path="/new"
+              element={
+                <MobileNewdrag
+                  boxes1={boxes1}
+                  bottomBoxContent={bottomBoxContent}
+                  setBoxes1={setBoxes1}
+                  text={text}
+                  setText={setText}
+                  setBottomBoxContent={setBottomBoxContent}
+                />
+              }
             />
-          }
-        />
-        <Route
-          path="/new"
-          element={
-            <Newdrag
-              boxes1={boxes1}
-              bottomBoxContent={bottomBoxContent}
-              setBoxes1={setBoxes1}
-              text={text}
-              setText={setText}
-              setBottomBoxContent={setBottomBoxContent}
+          ) : (
+            <Route
+              path="/new"
+              element={
+                <Newdrag
+                  boxes1={boxes1}
+                  bottomBoxContent={bottomBoxContent}
+                  setBoxes1={setBoxes1}
+                  text={text}
+                  setText={setText}
+                  setBottomBoxContent={setBottomBoxContent}
+                />
+              }
             />
-          }
-        />
-        <Route
-          path="/select"
-          element={
-            <SelectedBox bottomBoxContent={bottomBoxContent} name={name} />
-          }
-        />
-        <Route path="/ss" element={<SignNew />} />
-      </Routes>
-    </BrowserRouter>
+          )}
+          <Route
+            path="/select"
+            element={
+              <SelectedBox bottomBoxContent={bottomBoxContent} name={name} />
+            }
+          />
+          <Route path="/ss" element={<SignNew />} />
+          <Route path="/one" element={<Comp1 />} />
+        </Routes>
+      </BrowserRouter>
+    </AppProvider>
   );
 }
 

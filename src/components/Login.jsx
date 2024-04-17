@@ -8,14 +8,14 @@ import { FaEye } from "react-icons/fa";
 export default function Login({ name, setName }) {
   return (
     <section className=" relative overflow-hidden h-screen ">
-      <div className="absolute h-screen w-screen brightness-[45%]">
+      <div className="absolute h-screen w-screen brightness-[5%]">
         {/* <video autoPlay loop muted>
           <source src="../src/assets/video1.mp4" />
         </video> */}
 
-        <video loop muted>
+        {/* <video loop muted>
           <source src="../src/assets/video1.mp4" />
-        </video>
+        </video> */}
       </div>
       <div className="flex justify-between items-center px-6 py-6 relative">
         <div className="w-[180px] gradient ">
@@ -29,9 +29,9 @@ export default function Login({ name, setName }) {
           {/* <button>Sign In</button> */}
         </div>
       </div>
-      <section className=" text-white  relative ">
-        <div className="main-div flex flex-col items-center justify-center mt-36   ">
-          <div className="wrapper border-[rgba(255,255,255,0.5)] border-2 w-[350px] h-[auto]  px-4 py-12 text-center font-[Archivo, sans-serif] text-white  rounded-md">
+      <section className=" text-white  relative grid place-content-center h-[85vh] ">
+        <div className="main-div flex flex-col items-center justify-center   ">
+          <div className="wrapper border-[rgba(255,255,255,0.5)] border-2 w-[300px] md:w-[380px] h-[auto]  px-6 py-12 text-center font-[Archivo, sans-serif] text-white  rounded-md">
             <h3 className="text-2xl font-bold mb-3">Welcome Back</h3>
             {/* <div className="border-[rgba(255,255,255,0.2)] p-2 border-2 flex items-center justify-center gap-3 rounded-md my-4">
               <span>

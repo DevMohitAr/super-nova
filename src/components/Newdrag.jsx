@@ -80,7 +80,7 @@ export const Newdrag = ({
         </Link>
       </div>
 
-      <div className="absolute  brightness-[45%]">
+      <div className="absolute  brightness-[50%]">
         {!videoLoaded && (
           <img
             src="../src/assets/poster_image.jpg"
@@ -162,16 +162,18 @@ export const Newdrag = ({
                     </div>
                   )}
                 </div>
-                <Link
-                  to="/select"
-                  className={`text-center px-4 py-2 w-[270px] text-2xl abc2 absolute bottom-10 ml-[100px] ${
-                    bottomBoxContent.length >= 1
-                      ? "border-gray-200  border-2 "
-                      : ""
-                  } w-[fit-content] ml-auto mr-auto`}
-                >
-                  {bottomBoxContent.length >= 1 && "Submit"}
-                </Link>
+                
+                  <Link
+                    to="/select"
+                    className={`text-center px-4 py-2 w-[270px] text-2xl abc2 absolute bottom-10 left-[30%] ${
+                      bottomBoxContent.length >= 1
+                        ? "border-gray-200  border-2 "
+                        : ""
+                    } w-[fit-content] ml-auto mr-auto`}
+                  >
+                    {bottomBoxContent.length >= 1 && "Submit"}
+                  </Link>
+                
               </div>
 
               <div className=" eee2 px-8  py-6  flex-1 text-gray-50 border-gray-700 border-2">
@@ -184,12 +186,16 @@ export const Newdrag = ({
                       onChange={(e) => setQuery(e.target.value)}
                       className="w-full  text-gray-500 eee2 rounded-md p-3 "
                     />
-                    {query.length>=1?<button
-                      onClick={() => setQuery("")}
-                      className="absolute right-10 top-4 text-gray-300 text-xl"
-                    >
-                      <RxCross2 />
-                    </button>:''}
+                    {query.length >= 1 ? (
+                      <button
+                        onClick={() => setQuery("")}
+                        className="absolute right-10 top-4 text-gray-300 text-xl"
+                      >
+                        <RxCross2 />
+                      </button>
+                    ) : (
+                      ""
+                    )}
                   </div>
 
                   <span className="text-2xl border-2 border-gray-600 text-gray-400 p-2 abc2">
