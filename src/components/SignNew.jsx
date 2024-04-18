@@ -109,12 +109,12 @@ export default function SignNew() {
             animate="animate"
           >
             <motion.h1
-              className=" mb-3 text-[32px] custom-font md:text-[32px] lg:text-[48px] "
+              className=" mb-3 text-[32px] custom-font md:text-[32px] lg:text-[32px] "
               variants={headVariants}
             >
               Driving the Future of Business Intelligence{" "}
             </motion.h1>
-            <h2 className="text-xl italic font-semibold custom-font1 md:text-2xl ">
+            <h2 className="text-xl italic font-semibold custom-font1 md:text-xl ">
               Powered By Ai
             </h2>
             <motion.p className="text-2xl mb-7" variants={headVariants}>

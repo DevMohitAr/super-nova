@@ -97,9 +97,9 @@ export const Newdrag = ({
           <source src="/assets/video1.mp4" />
         </video>
       </div>
-      <section className="grid grid-rows-[auto_1fr] w-screen h-screen gap-10 p-6">
+      <section className="grid grid-rows-[auto_1fr] w-screen h-screen gap-3 p-6">
         <div className="flex justify-between items-center relative h-full  ">
-          <div className="w-[200px] gradient ml-6 ">
+          <div className="w-[150px] gradient ml-6 ">
             <img src="/assets/hero-2.png" alt="logo" />
           </div>
           <div className=" flex gap-8 text-white abc2 border-2 border-gray-700">
@@ -130,19 +130,19 @@ export const Newdrag = ({
                           key={content.id}
                           id={content.id}
                           // className="bg-red-400 p-4 w-[fit-content] self-start"
-                          className={`rounded-2xl eee border-2 px-4 py-6  ${content.color} grid place-content-center   h-[60px] shadow-xl`}
+                          className={`rounded-2xl eee border-2 px-4 py-6  ${content.color} grid place-content-center   h-[80px] shadow-xl`}
                           draggable
                           onDragStart={(e) =>
                             handleDragStart(e, content.id, false)
                           }
                           onDragOver={handleDragOver}
                         >
-                          <p className="text-md text-gray-200 mb-2 whitespace-nowrap mt-2">
+                          <p className="text-sm text-gray-200 mb-2  mt-3">
                             {content.text}
                           </p>
                         </div>
                         <div
-                          className={`box w-8 h-8 ${content.bgColor} absolute top-[-15px] left-5 rounded-[50%] flex justify-center items-center`}
+                          className={`box w-6 h-6 ${content.bgColor} absolute top-[-12px] left-5 rounded-[50%] flex justify-center items-center`}
                         >
                           {j === 0 ? (
                             <IoIosChatboxes />
@@ -165,7 +165,7 @@ export const Newdrag = ({
                 
                   <Link
                     to="/select"
-                    className={`text-center px-4 py-2 w-[270px] text-2xl abc2 absolute bottom-10 left-[30%] ${
+                    className={`text-center px-4 py-2  text-md abc2 absolute bottom-2 left-[26%] ${
                       bottomBoxContent.length >= 1
                         ? "border-gray-200  border-2 "
                         : ""
@@ -176,8 +176,8 @@ export const Newdrag = ({
                 
               </div>
 
-              <div className=" eee2 px-8  py-6  flex-1 text-gray-50 border-gray-700 border-2">
-                <div className="flex gap-4  items-center  ">
+              <div className=" eee2 px-8  py-2  flex-1 text-gray-50 border-gray-700 border-2">
+                <div className="flex gap-2  items-center  ">
                   <div className="relative w-full">
                     <input
                       type="text"
@@ -202,69 +202,8 @@ export const Newdrag = ({
                     Search
                   </span>
                 </div>
-                {/* <div className="mt-8 flex justify-between text-gray-400  text-[10px] ">
-                <button
-                  type="button"
-                  className="px-4 rounded-md py-[1] mr-2 border-2   border-gray-400"
-                >
-                  Personalised Text Generation
-                </button>
-                <button
-                  type="button"
-                  className="px-4 rounded-md py-[1] border-2 whitespace-nowrap   border-gray-400  mr-2"
-                >
-                  Data Insights
-                </button>
-                <button
-                  type="button"
-                  className="px-4 py-2 border-2   border-gray-400 rounded-md mr-2"
-                >
-                  Dashboard
-                </button>
-                <button
-                  type="button"
-                  className="px-4 py-2 border-2   border-gray-400 rounded-md  mr-2 whitespace-nowrap"
-                >
-                  Tech Risk
-                </button>
-                <button
-                  type="button"
-                  className="px-4 py-2 border-2   border-gray-400 rounded-md  mr-2"
-                >
-                  Knowledge Management
-                </button>
-                <button
-                  type="button"
-                  className="px-4 py-2 border-2   border-gray-400 rounded-md  mr-2"
-                >
-                  Knowledge Generation
-                </button>
-                <button
-                  type="button"
-                  className="px-4 py-2 border-2   border-gray-400 rounded-md  mr-2"
-                >
-                  Summarize
-                </button>
-                <button
-                  type="button"
-                  className="px-4 py-2 border-2   border-gray-400 rounded-md  mr-2"
-                >
-                  Vendor Comparison
-                </button>
-                <button
-                  type="button"
-                  className="px-4 py-2 border-2   border-gray-400 rounded-md  mr-2"
-                >
-                  RFP
-                </button>
-                <button
-                  type="button"
-                  className="px-4 py-2 border-2   border-gray-400 rounded-md  mr-0"
-                >
-                  Scope Generation
-                </button>
-              </div> */}
-                <div className="mt-8 flex justify-between text-gray-400  text-[10px] ">
+               
+                <div className="mt-4 flex justify-between text-gray-400  text-[10px] ">
                   {text.map((btn, i) => {
                     return (
                       <button
@@ -278,18 +217,18 @@ export const Newdrag = ({
                   })}
                 </div>
 
-                <h2 className="text-gray-50 mt-10 text-lg uppercase font-italic tracking-wide ">
+                <h2 className="text-gray-50 mt-4 text-md uppercase font-italic tracking-wide ">
                   Choose your AI Products
                 </h2>
 
                 <div
                   id="start-box"
-                  className="  mt-6 py-2 h-[130px]  relative  "
+                  className="  mt-3 py-2 h-[130px]  relative  "
                   onDragOver={handleDragOver}
                   onDrop={(e) => handleDrop(e, "start-box")}
                 >
                   {query.length >= 1 ? (
-                    <div className="flex gap-10 flex-wrap min-w-[280px] flex-1 justify-center ">
+                    <div className="flex gap-5 flex-wrap min-w-[280px] flex-1 justify-center ">
                       {boxes1
                         .filter((box) => {
                           return box.desc.includes(query.toLowerCase());
@@ -306,7 +245,7 @@ export const Newdrag = ({
                               onMouseEnter={(e) => handleEnter(e.target.id)}
                               onMouseLeave={() => handleEnter(null)}
                               id={box.id}
-                              className={`text-gray-400 text-md grid place-content-center h-[150px]     py-6 px-4   shadow-xl rounded-2xl  border-[1px] hover:border-2 hover:shadow-inner min-w-[180px] max-w-[320px]   relative -top-2 eee ${box.color} flex-1   `}
+                              className={`text-gray-400 text-md grid place-content-center h-[120px]     py-6 px-4   shadow-xl rounded-2xl  border-[1px] hover:border-2 hover:shadow-inner min-w-[180px] max-w-[320px]   relative -top-2 eee ${box.color} flex-1   `}
                             >
                               <p
                                 className={`text-md text-gray-100 mb-2 mt-2 mine2 text-center ${
@@ -316,9 +255,9 @@ export const Newdrag = ({
                                 {box.text}
                               </p>
                               <p
-                                className={`text-[16px] text-gray-400 max-w-64 mine mine2  ${
+                                className={`text-[12px] text-gray-400 max-w-64 mine mine2  ${
                                   box.id === hoverBox ? "block" : "hidden"
-                                } leading-7 `}
+                                }  `}
                               >
                                 {box.text === "Consult AI-Knowledge Management"
                                   ? box.desc.substring(0, 78)
@@ -351,7 +290,7 @@ export const Newdrag = ({
                         })}
                     </div>
                   ) : (
-                    <div className="flex flex-wrap gap-16 flex-1 justify-center ">
+                    <div className="flex flex-wrap gap-5 flex-1 justify-center ">
                       {boxes1?.map((box, j) => (
                         <div
                           key={j}
@@ -361,7 +300,7 @@ export const Newdrag = ({
                           onMouseEnter={(e) => handleEnter(e.target.id)}
                           onMouseLeave={() => handleEnter(null)}
                           id={box.id}
-                          className={`text-gray-400 text-md grid place-content-center h-[150px]     py-6 px-4   shadow-xl rounded-2xl  border-[1px] hover:border-2 hover:shadow-inner min-w-[180px] max-w-[320px]  relative -top-2 eee ${box.color}  flex-1`}
+                          className={`text-gray-400 text-md grid place-content-center h-[120px]     py-6 px-4   shadow-xl rounded-2xl  border-[1px] hover:border-2 hover:shadow-inner min-w-[180px] max-w-[320px]  relative -top-2 eee ${box.color}  flex-1`}
                         >
                           <p
                             className={`text-md text-gray-100 mb-2 mt-2 mine2 text-center ${
@@ -371,9 +310,9 @@ export const Newdrag = ({
                             {box.text}
                           </p>
                           <p
-                            className={`text-[16px] text-gray-400 max-w-64 mine mine2 ${
+                            className={`text-[12px] text-gray-400 max-w-64 mine mine2 ${
                               box.id === hoverBox ? "block" : "hidden"
-                            } leading-7`}
+                            } `}
                           >
                             {box.text === "Consult AI-Knowledge Management"
                               ? box.desc.substring(0, 78)
