@@ -5,7 +5,7 @@ const VideoBackground = () => {
   return (
     <div className="absolute top-0 left-0 w-full h-full overflow-hidden brightness-[50%] ">
       <video autoPlay loop muted className="w-full h-full object-cover">
-        <source src="../../assets/video1.mp4" />
+        <source src="/assets/video1.mp4" />
       </video>
     </div>
   );

@@ -29,7 +29,7 @@ export default function SelectedBox({ bottomBoxContent, name }) {
   return (
     <main className="relative grid grid-rows-[auto_1fr] h-screen w-screen p-6 gap-3 ">
       <video className="absolute brightness-[50%] h-screen " loop muted>
-        <source src="../src/assets/video1.mp4" />
+        <source src="/assets/video1.mp4" />
       </video>
       <div className="flex justify-between items-center relative ">
         <Link
@@ -39,7 +39,7 @@ export default function SelectedBox({ bottomBoxContent, name }) {
           <FaArrowLeft />
         </Link>
         <div className="w-[200px] gradient pl-10 ">
-          <img src="../src/assets/hero-2.png" alt="logo" />
+          <img src="/assets/hero-2.png" alt="logo" />
         </div>
         <div className="flex gap-8 abc2 border-2 border-gray-700 text-white">
           {/* <button>For Business</button>

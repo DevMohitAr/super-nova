@@ -83,7 +83,7 @@ export const Newdrag = ({
       <div className="absolute  brightness-[50%]">
         {!videoLoaded && (
           <img
-            src="../src/assets/poster_image.jpg"
+            src="/assets/poster_image.jpg"
             alt="Poster Image"
             className="w-full h-full object-cover"
           />
@@ -94,13 +94,13 @@ export const Newdrag = ({
           onLoadedData={videoLoadedHandler}
           className={videoLoaded ? "block" : "hidden"}
         >
-          <source src="../src/assets/video1.mp4" />
+          <source src="/assets/video1.mp4" />
         </video>
       </div>
       <section className="grid grid-rows-[auto_1fr] w-screen h-screen gap-10 p-6">
         <div className="flex justify-between items-center relative h-full  ">
           <div className="w-[200px] gradient ml-6 ">
-            <img src="../src/assets/hero-2.png" alt="logo" />
+            <img src="/assets/hero-2.png" alt="logo" />
           </div>
           <div className=" flex gap-8 text-white abc2 border-2 border-gray-700">
             <Link to="/">Log out</Link>

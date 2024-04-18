@@ -20,7 +20,7 @@ export default function Login({ name, setName }) {
       <div className="flex justify-between items-center px-6 py-6 relative">
         <div className="w-[180px] gradient ">
           <Link to="/">
-            <img src="../src/assets/hero-2.png" alt="logo" />
+            <img src="/assets/hero-2.png" alt="logo" />
           </Link>
         </div>
         <div className="mr-2 flex gap-8 text-white">

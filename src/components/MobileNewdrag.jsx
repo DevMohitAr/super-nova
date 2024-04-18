@@ -35,7 +35,7 @@ const {setMobSel,mobSel} = useGlobal()
          
           className="w-full h-full object-cover"
         >
-          <source src="../src/assets/video1.mp4" />
+          <source src="/assets/video1.mp4" />
         </video>
       </div>
 
