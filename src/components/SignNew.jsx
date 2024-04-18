@@ -89,7 +89,7 @@ export default function SignNew() {
             initial="initial"
             animate="animate"
           >
-            <motion.div className="w-[180px] gradient" variants={textVariants}>
+            <motion.div className="w-[150px] gradient" variants={textVariants}>
               <motion.img
                 src="/assets/hero-2.png"
                 alt="logo"
@@ -135,7 +135,7 @@ export default function SignNew() {
               <Link
                 to="/login"
                 type="button"
-                className=" text-white border-2 border-white px-12 py-4  abc"
+                className=" text-white border-2 border-white px-6 py-3 text-sm abc"
               >
                 Get Started
               </Link>
@@ -160,7 +160,7 @@ export default function SignNew() {
           transition={{ duration: 7 }}
         >
           <svg
-            className="svg w-[500px] h-[85px] md:h-[125px] md:[500px]"
+            className="svg w-[300px] h-[85px] md:h-[125px] md:[300px]"
             stroke="white"
             viewBox="0 0 500 125"
             fill="white"

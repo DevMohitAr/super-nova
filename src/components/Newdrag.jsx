@@ -118,7 +118,7 @@ export const Newdrag = ({
               <div className="h-full relative">
                 <div
                   id="bottomBox"
-                  className=" eee3 w-[150px]  text-gray-50 border-2 border-gray-700 flex flex-col gap-5 py-4 px-4    shadow-xl h-full relative  "
+                  className=" eee3 w-[180px]  text-gray-50 border-2 border-gray-700 flex flex-col gap-5 py-4 px-4    shadow-xl h-full relative  "
                   onDragOver={handleDragOver}
                   onDrop={(e) => handleDrop(e, "bottomBox")}
                 >
@@ -130,14 +130,14 @@ export const Newdrag = ({
                           key={content.id}
                           id={content.id}
                           // className="bg-red-400 p-4 w-[fit-content] self-start"
-                          className={`rounded-2xl eee border-2 px-4 py-6  ${content.color} grid place-content-center   h-[70px] shadow-xl`}
+                          className={`rounded-2xl eee border-2 px-4 py-6  ${content.color} grid place-content-center   h-[50px] shadow-xl`}
                           draggable
                           onDragStart={(e) =>
                             handleDragStart(e, content.id, false)
                           }
                           onDragOver={handleDragOver}
                         >
-                          <p className="text-[12px] text-gray-200 mb-1  mt-2">
+                          <p className="text-[10px] text-gray-200 mb-1  mt-2">
                             {content.text}
                           </p>
                         </div>
@@ -216,7 +216,7 @@ export const Newdrag = ({
                   })}
                 </div>
 
-                <h2 className="text-gray-50 mt-4 text-md uppercase font-italic tracking-wide ">
+                <h2 className="text-gray-50 mt-4 text-md uppercase font-italic tracking-wide mb-4 ">
                   Choose your AI Products
                 </h2>
 
@@ -227,7 +227,7 @@ export const Newdrag = ({
                   onDrop={(e) => handleDrop(e, "start-box")}
                 >
                   {query.length >= 1 ? (
-                    <div className="flex gap-5 flex-wrap min-w-[280px] flex-1 justify-center ">
+                    <div className="flex gap-8 flex-wrap min-w-[280px] flex-1 justify-center ">
                       {boxes1
                         .filter((box) => {
                           return box.desc.includes(query.toLowerCase());
@@ -244,10 +244,10 @@ export const Newdrag = ({
                               onMouseEnter={(e) => handleEnter(e.target.id)}
                               onMouseLeave={() => handleEnter(null)}
                               id={box.id}
-                              className={`text-gray-400 text-md grid place-content-center h-[120px]     py-6 px-4   shadow-xl rounded-2xl  border-[1px] hover:border-2 hover:shadow-inner min-w-[180px] max-w-[320px]   relative -top-2 eee ${box.color} flex-1   `}
+                              className={`text-gray-400 text-md grid place-content-center h-[120px]     py-6 px-4   shadow-xl rounded-2xl  border-[1px] hover:border-2 hover:shadow-inner min-w-[150px] max-w-[270px]   relative -top-2 eee ${box.color} flex-1   `}
                             >
                               <p
-                                className={`text-md text-gray-100 mb-2 mt-2 mine2 text-center ${
+                                className={`text-[12px] text-gray-100 mb-2 mt-2 mine2 text-center ${
                                   box.id === hoverBox ? "hidden" : "block"
                                 }`}
                               >
@@ -289,7 +289,7 @@ export const Newdrag = ({
                         })}
                     </div>
                   ) : (
-                    <div className="flex flex-wrap gap-5 flex-1 justify-center ">
+                    <div className="flex flex-wrap gap-8 flex-1 justify-center ">
                       {boxes1?.map((box, j) => (
                         <div
                           key={j}
@@ -299,17 +299,17 @@ export const Newdrag = ({
                           onMouseEnter={(e) => handleEnter(e.target.id)}
                           onMouseLeave={() => handleEnter(null)}
                           id={box.id}
-                          className={`text-gray-400 text-md grid place-content-center h-[120px]     py-6 px-4   shadow-xl rounded-2xl  border-[1px] hover:border-2 hover:shadow-inner min-w-[180px] max-w-[320px]  relative -top-2 eee ${box.color}  flex-1`}
+                          className={`text-gray-400 text-md grid place-content-center h-[120px]     py-6 px-4   shadow-xl rounded-2xl  border-[1px] hover:border-2 hover:shadow-inner min-w-[150px] max-w-[320px]  relative -top-2 eee ${box.color}  flex-1`}
                         >
                           <p
-                            className={`text-md text-gray-100 mb-2 mt-2 mine2 text-center ${
+                            className={`text-[12px] text-gray-100 mb-2 mt-2 mine2 text-center ${
                               box.id === hoverBox ? "hidden" : "block"
                             }`}
                           >
                             {box.text}
                           </p>
                           <p
-                            className={`text-[12px] text-gray-400 max-w-64 mine mine2 ${
+                            className={`text-[10px] text-gray-400 max-w-64 mine mine2 ${
                               box.id === hoverBox ? "block" : "hidden"
                             } `}
                           >

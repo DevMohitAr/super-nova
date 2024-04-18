@@ -34,14 +34,14 @@ export default function SelectedBox({ bottomBoxContent, name }) {
       <div className="flex justify-between items-center relative ">
         <Link
           to="/new"
-          className="absolute text-zinc-100 text-2xl top-0 left-0"
+          className="absolute text-zinc-100 text-lg top-0 left-0"
         >
           <FaArrowLeft />
         </Link>
-        <div className="w-[200px] gradient pl-10 ">
+        <div className="w-[150px] gradient pl-10 ">
           <img src="/assets/hero-2.png" alt="logo" />
         </div>
-        <div className="flex gap-8 abc2 border-2 border-gray-700 text-white">
+        <div className="flex gap-8 abc2 border-2 text-sm border-gray-700 text-white">
           {/* <button>For Business</button>
           <button>FAQ</button> */}
           <Link to="/">Log out</Link>
@@ -61,12 +61,12 @@ export default function SelectedBox({ bottomBoxContent, name }) {
             className="text-gray-200 text-2xl  relative p-2 "
           >
             <button
-              className={`${show ? "block" : "hidden"} inline-block ml-1`}
+              className={`${show ? "block" : "hidden"} inline-block `}
             >
               <FaBarsStaggered />
             </button>
             <button
-              className={`${show ? "hidden" : "block"} inline-block ml-1`}
+              className={`${show ? "hidden" : "block"} inline-block `}
             >
               <FaBars />
             </button>
@@ -75,7 +75,7 @@ export default function SelectedBox({ bottomBoxContent, name }) {
                 return (
                   <div
                     key={i}
-                    className={`box w-8 h-8 mb-[90px] mt-[130px]  ${c.bgColor} rounded-[50%] flex justify-center items-center`}
+                    className={`box w-5 h-5 mb-[40px] mt-[30px]  ${c.bgColor} rounded-[50%] flex justify-center items-center`}
                   >
                     {i === 0 ? (
                       <IoIosChatboxes />
@@ -91,8 +91,8 @@ export default function SelectedBox({ bottomBoxContent, name }) {
           </div>
 
           <div className={`${show ? "block" : "hidden"} h-full `}>
-            <div className=" pt-8 pb-8  text-gray-50 font-italic ">
-              <p className="text-center text-2xl px-2">Selected Fields</p>
+            <div className="   text-gray-50 font-italic ">
+              <p className="text-center text-lg px-2">Selected Fields</p>
             </div>
             <div className=" px-6   ">
               {bottomBoxContent.map((c, i) => {
@@ -100,17 +100,17 @@ export default function SelectedBox({ bottomBoxContent, name }) {
                   <section key={i} className="flex items-center gap-5">
                     <div
                       key={i}
-                      className={`relative rounded-2xl border-2 p-4 mt-8 text-gray-50 whitespace-nowrap ${
+                      className={`relative rounded-2xl border-2 p-4 mt-2 mb-2 text-[10px] text-gray-50  ${
                         c.color
-                      } w-[280px] h-[60px] grid place-content-center ${
+                      } w-[140px] h-[60px] grid place-content-center ${
                         show ? "block" : "hidden"
                       }`}
                     >
-                      <button onClick={() => setSelectedBox(c.content)}>
+                      <button  onClick={() => setSelectedBox(c.content)}>
                         {c.text}
                       </button>
                       <div
-                        className={`box w-8 h-8 ${c.bgColor}  absolute top-[-15px] left-5 rounded-[50%] flex justify-center items-center`}
+                        className={`box w-5 h-5 ${c.bgColor}  absolute top-[-10px] left-5 rounded-[50%] flex justify-center items-center`}
                       >
                         {i === 0 ? (
                           <IoIosChatboxes />
@@ -139,7 +139,7 @@ export default function SelectedBox({ bottomBoxContent, name }) {
               />
             ) : (
               <div className=" grid place-content-center h-full">
-                <p className="text-zinc-200 text-4xl">Choose Any Agent</p>
+                <p className="text-zinc-200 text-2xl">Choose Any Agent</p>
               </div>
             )}
           </div>
