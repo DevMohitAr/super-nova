@@ -75,7 +75,7 @@ export const Newdrag = ({
   return (
     <main className="relative h-screen overflow-hidden ">
       <div className="absolute z-30 top-6 left-4">
-        <Link to="/login" className=" text-zinc-100 text-2xl  ">
+        <Link to="/login" className=" text-zinc-100 text-lg  ">
           <FaArrowLeft />
         </Link>
       </div>
@@ -99,10 +99,10 @@ export const Newdrag = ({
       </div>
       <section className="grid grid-rows-[auto_1fr] w-screen h-screen gap-3 p-6">
         <div className="flex justify-between items-center relative h-full  ">
-          <div className="w-[150px] gradient ml-6 ">
+          <div className="w-[120px] gradient ml-6 ">
             <img src="/assets/hero-2.png" alt="logo" />
           </div>
-          <div className=" flex gap-8 text-white abc2 border-2 border-gray-700">
+          <div className="text-sm flex gap-8 text-white abc2 border-2 border-gray-700">
             <Link to="/">Log out</Link>
           </div>
         </div>
@@ -118,26 +118,26 @@ export const Newdrag = ({
               <div className="h-full relative">
                 <div
                   id="bottomBox"
-                  className=" eee3 w-[180px]  text-gray-50 border-2 border-gray-700 flex flex-col gap-8 py-8 px-4    shadow-xl h-full relative  "
+                  className=" eee3 w-[150px]  text-gray-50 border-2 border-gray-700 flex flex-col gap-5 py-4 px-4    shadow-xl h-full relative  "
                   onDragOver={handleDragOver}
                   onDrop={(e) => handleDrop(e, "bottomBox")}
                 >
                   {/* Bottom Box */}
                   {bottomBoxContent.length >= 1 ? (
                     bottomBoxContent?.map((content, j) => (
-                      <section className="relative" key={j}>
+                      <section className="relative " key={j}>
                         <div
                           key={content.id}
                           id={content.id}
                           // className="bg-red-400 p-4 w-[fit-content] self-start"
-                          className={`rounded-2xl eee border-2 px-4 py-6  ${content.color} grid place-content-center   h-[80px] shadow-xl`}
+                          className={`rounded-2xl eee border-2 px-4 py-6  ${content.color} grid place-content-center   h-[70px] shadow-xl`}
                           draggable
                           onDragStart={(e) =>
                             handleDragStart(e, content.id, false)
                           }
                           onDragOver={handleDragOver}
                         >
-                          <p className="text-sm text-gray-200 mb-2  mt-3">
+                          <p className="text-[12px] text-gray-200 mb-1  mt-2">
                             {content.text}
                           </p>
                         </div>
@@ -156,24 +156,23 @@ export const Newdrag = ({
                     ))
                   ) : (
                     <div className="flex justify-center items-center w-full uppercase tracking-widest h-full">
-                      <h1 className="text-gray-400 text-center">
+                      <h3 className="text-gray-400 text-sm text-center">
                         drop your ai products here
-                      </h1>
+                      </h3>
                     </div>
                   )}
                 </div>
-                
-                  <Link
-                    to="/select"
-                    className={`text-center px-4 py-2  text-md abc2 absolute bottom-2 left-[26%] ${
-                      bottomBoxContent.length >= 1
-                        ? "border-gray-200  border-2 "
-                        : ""
-                    } w-[fit-content] ml-auto mr-auto`}
-                  >
-                    {bottomBoxContent.length >= 1 && "Submit"}
-                  </Link>
-                
+
+                <Link
+                  to="/select"
+                  className={`text-center px-4 py-2  text-[12px] abc2 absolute bottom-2 left-[23%] font-bold ${
+                    bottomBoxContent.length >= 1
+                      ? "border-gray-200  border-2 "
+                      : ""
+                  } w-[fit-content] ml-auto mr-auto`}
+                >
+                  {bottomBoxContent.length >= 1 && "Submit"}
+                </Link>
               </div>
 
               <div className=" eee2 px-8  py-2  flex-1 text-gray-50 border-gray-700 border-2">
@@ -184,12 +183,12 @@ export const Newdrag = ({
                       placeholder="Label here..."
                       value={query}
                       onChange={(e) => setQuery(e.target.value)}
-                      className="w-full  text-gray-500 eee2 rounded-md p-3 "
+                      className="w-full text-sm  text-gray-500 eee2 rounded-md p-3 "
                     />
                     {query.length >= 1 ? (
                       <button
                         onClick={() => setQuery("")}
-                        className="absolute right-10 top-4 text-gray-300 text-xl"
+                        className="absolute right-10 top-4 text-gray-300 text-md"
                       >
                         <RxCross2 />
                       </button>
@@ -198,11 +197,11 @@ export const Newdrag = ({
                     )}
                   </div>
 
-                  <span className="text-2xl border-2 border-gray-600 text-gray-400 p-2 abc2">
+                  <span className="text-md border-2 border-gray-600 text-gray-400 p-2 abc2">
                     Search
                   </span>
                 </div>
-               
+
                 <div className="mt-4 flex justify-between text-gray-400  text-[10px] ">
                   {text.map((btn, i) => {
                     return (

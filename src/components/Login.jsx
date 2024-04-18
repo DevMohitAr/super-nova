@@ -17,8 +17,8 @@ export default function Login({ name, setName }) {
           <source src="../src/assets/video1.mp4" />
         </video> */}
       </div>
-      <div className="flex justify-between items-center px-6 py-6 relative">
-        <div className="w-[180px] gradient ">
+      <div className="flex justify-between items-center px-6 py-4 relative">
+        <div className="w-[150px] gradient ">
           <Link to="/">
             <img src="/assets/hero-2.png" alt="logo" />
           </Link>
@@ -31,8 +31,8 @@ export default function Login({ name, setName }) {
       </div>
       <section className=" text-white  relative grid place-content-center h-[85vh] ">
         <div className="main-div flex flex-col items-center justify-center   ">
-          <div className="wrapper border-[rgba(255,255,255,0.5)] border-2 w-[300px] md:w-[380px] h-[auto]  px-6 py-12 text-center font-[Archivo, sans-serif] text-white  rounded-md">
-            <h3 className="text-2xl font-bold mb-3">Welcome Back</h3>
+          <div className="wrapper border-[rgba(255,255,255,0.5)] border-2 w-[300px] md:w-[320px] h-[auto]  px-6 py-8 text-center font-[Archivo, sans-serif] text-white  rounded-md">
+            <h3 className="text-lg font-bold mb-3">Welcome Back</h3>
             {/* <div className="border-[rgba(255,255,255,0.2)] p-2 border-2 flex items-center justify-center gap-3 rounded-md my-4">
               <span>
                 <IoLogoGoogle />{" "}
@@ -56,7 +56,7 @@ export default function Login({ name, setName }) {
               name="email"
               id="email"
               placeholder="Your Name"
-              className="bg-[#e6e6fa] text-black w-[100%] rounded-md p-3 outline-none border-none outline-[gray] my-4"
+              className="bg-[#e6e6fa] text-black w-[100%] rounded-md p-3 outline-none border-none outline-[gray] my-4 text-sm"
               onChange={(e) => setName(e.target.value)}
             />
 
@@ -66,7 +66,7 @@ export default function Login({ name, setName }) {
                 name="password"
                 id="password"
                 placeholder="Your password"
-                className="bg-[#e6e6fa] text-black w-[100%] rounded-md p-3 outline-none border-none outline-[gray] my-4 relative"
+                className="bg-[#e6e6fa] text-black w-[100%] rounded-md p-3 outline-none border-none outline-[gray] my-4 text-sm relative"
               />
               {/* <span className="fa-solid fa-eye absolute right-3">
                 <FaEye />
@@ -81,7 +81,7 @@ export default function Login({ name, setName }) {
               <Link
                 to="/new"
                 type="button"
-                className={`btn border-2 border-gray-100 abc  w-full p-3 rounded-md text-gray font-bold text-xl mt-8 `}
+                className={`btn border-2 border-gray-100 abc  w-full p-3 rounded-md text-gray font-bold text-md mt-6 `}
               >
                 Let's go
               </Link>
