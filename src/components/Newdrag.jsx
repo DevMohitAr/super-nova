@@ -73,14 +73,14 @@ export const Newdrag = ({
     setHoverBox(id);
   };
   return (
-    <main className="relative h-screen overflow-hidden ">
+    <main className="hero relative h-screen overflow-hidden ">
       <div className="absolute z-30 top-6 left-4">
         <Link to="/login" className=" text-zinc-100 text-lg  ">
           <FaArrowLeft />
         </Link>
       </div>
 
-      <div className="absolute  brightness-[50%]">
+      {/* <div className="absolute  brightness-[50%]">
         {!videoLoaded && (
           <img
             src="/assets/poster_image.jpg"
@@ -96,7 +96,7 @@ export const Newdrag = ({
         >
           <source src="/assets/video1.mp4" />
         </video>
-      </div>
+      </div> */}
       <section className="grid grid-rows-[auto_1fr] w-screen h-screen gap-3 p-6">
         <div className="flex justify-between items-center relative h-full  ">
           <div className="w-[120px] gradient ml-6 ">

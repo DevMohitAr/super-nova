@@ -70,7 +70,7 @@ export default function SignNew() {
   };
   return (
     <div>
-      <main className=" relative w-screen h-screen overflow-hidden bbc ">
+      <main className="hero relative w-screen h-screen overflow-hidden bbc ">
         {/* <div className="absolute h-screen w-screen brightness-[60%] ">
           <video autoPlay loop muted  >
             <source src="/assets/video1.mp4" />

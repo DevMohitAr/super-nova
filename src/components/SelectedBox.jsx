@@ -27,10 +27,10 @@ export default function SelectedBox({ bottomBoxContent, name }) {
     },
   };
   return (
-    <main className="relative grid grid-rows-[auto_1fr] h-screen w-screen p-6 gap-3 ">
-      <video className="absolute brightness-[50%] h-screen " loop muted>
+    <main className=" hero relative grid grid-rows-[auto_1fr] h-screen w-screen p-6 gap-3 ">
+      {/* <video className="absolute brightness-[50%] h-screen " loop muted>
         <source src="/assets/video1.mp4" />
-      </video>
+      </video> */}
       <div className="flex justify-between items-center relative ">
         <Link
           to="/new"

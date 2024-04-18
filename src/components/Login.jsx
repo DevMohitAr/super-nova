@@ -7,7 +7,7 @@ import { FaEye } from "react-icons/fa";
 
 export default function Login({ name, setName }) {
   return (
-    <section className=" relative overflow-hidden h-screen ">
+    <section className="hero relative overflow-hidden h-screen ">
       <div className="absolute h-screen w-screen brightness-[5%]">
         {/* <video autoPlay loop muted>
           <source src="../src/assets/video1.mp4" />
