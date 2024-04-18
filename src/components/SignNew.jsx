@@ -160,7 +160,7 @@ export default function SignNew() {
           transition={{ duration: 7 }}
         >
           <svg
-            className="svg w-[100px] h-[85px] md:h-[125px] md:[500px]"
+            className="svg  h-[85px] md:h-[125px] md:[500px]"
             stroke="white"
             viewBox="0 0 500 125"
             fill="white"
