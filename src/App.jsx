@@ -116,7 +116,7 @@ function App() {
   return (
     <AppProvider>
       <BrowserRouter>
-        <VideoBackground />
+        
         <Routes>
           <Route path="/" element={<SignNew />} />
           <Route

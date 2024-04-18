@@ -73,7 +73,7 @@ export const Newdrag = ({
     setHoverBox(id);
   };
   return (
-    <main className="hero relative h-screen overflow-hidden ">
+    <main className="hero relative h-screen overflow-hidden brightness-[80%] ">
       <div className="absolute z-30 top-6 left-4">
         <Link to="/login" className=" text-zinc-100 text-lg  ">
           <FaArrowLeft />
@@ -118,7 +118,7 @@ export const Newdrag = ({
               <div className="h-full relative">
                 <div
                   id="bottomBox"
-                  className=" eee3 w-[180px]  text-gray-50 border-2 border-gray-700 flex flex-col gap-5 py-4 px-4    shadow-xl h-full relative  "
+                  className=" eee3 w-[180px]  text-gray-50 border-2 border-gray-400 flex flex-col gap-5 py-4 px-4    shadow-xl h-full relative  "
                   onDragOver={handleDragOver}
                   onDrop={(e) => handleDrop(e, "bottomBox")}
                 >
@@ -156,7 +156,7 @@ export const Newdrag = ({
                     ))
                   ) : (
                     <div className="flex justify-center items-center w-full uppercase tracking-widest h-full">
-                      <h3 className="text-gray-400 text-sm text-center">
+                      <h3 className="text-gray-200 text-sm text-center">
                         drop your ai products here
                       </h3>
                     </div>
@@ -175,7 +175,7 @@ export const Newdrag = ({
                 </Link>
               </div>
 
-              <div className=" eee2 px-8  py-2  flex-1 text-gray-50 border-gray-700 border-2">
+              <div className=" eee2 px-8  py-2  flex-1 text-gray-50 border-gray-400 border-2">
                 <div className="flex gap-2  items-center  ">
                   <div className="relative w-full">
                     <input
@@ -197,18 +197,18 @@ export const Newdrag = ({
                     )}
                   </div>
 
-                  <span className="text-md border-2 border-gray-600 text-gray-400 p-2 abc2">
+                  <span className="text-md border-2 border-gray-400 bg-gray-600 text-gray-200 p-2 abc2">
                     Search
                   </span>
                 </div>
 
-                <div className="mt-4 flex justify-between text-gray-400  text-[10px] ">
+                <div className="mt-4 flex justify-between text-gray-200  text-[10px] ">
                   {text.map((btn, i) => {
                     return (
                       <button
                         onClick={(e) => setQuery(btn.text.toLowerCase())}
                         key={i}
-                        className="px-4 py-2 border-2   border-gray-400 rounded-md  mr-2"
+                        className="px-4 py-2 border-2 text-white bg-gray-600  border-gray-200 rounded-md  mr-2"
                       >
                         {btn.text}
                       </button>
