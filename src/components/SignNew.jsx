@@ -109,7 +109,7 @@ export default function SignNew() {
             animate="animate"
           >
             <motion.h1
-              className=" mb-3 text-[32px] custom-font md:text-[48px] "
+              className=" mb-3 text-[32px] custom-font md:text-[32px] lg:text-[48px] "
               variants={headVariants}
             >
               Driving the Future of Business Intelligence{" "}
@@ -160,7 +160,7 @@ export default function SignNew() {
           transition={{ duration: 7 }}
         >
           <svg
-            className="svg  h-[85px] md:h-[125px] md:[500px]"
+            className="svg w-[500px] h-[85px] md:h-[125px] md:[500px]"
             stroke="white"
             viewBox="0 0 500 125"
             fill="white"

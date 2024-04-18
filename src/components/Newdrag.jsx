@@ -306,7 +306,7 @@ export const Newdrag = ({
                               onMouseEnter={(e) => handleEnter(e.target.id)}
                               onMouseLeave={() => handleEnter(null)}
                               id={box.id}
-                              className={`text-gray-400 text-md grid place-content-center h-[170px]     py-6 px-4   shadow-xl rounded-2xl  border-[1px] hover:border-2 hover:shadow-inner min-w-[280px] max-w-[520px]   relative -top-2 eee ${box.color} flex-1   `}
+                              className={`text-gray-400 text-md grid place-content-center h-[150px]     py-6 px-4   shadow-xl rounded-2xl  border-[1px] hover:border-2 hover:shadow-inner min-w-[180px] max-w-[320px]   relative -top-2 eee ${box.color} flex-1   `}
                             >
                               <p
                                 className={`text-md text-gray-100 mb-2 mt-2 mine2 whitespace-nowrap ${
@@ -361,7 +361,7 @@ export const Newdrag = ({
                           onMouseEnter={(e) => handleEnter(e.target.id)}
                           onMouseLeave={() => handleEnter(null)}
                           id={box.id}
-                          className={`text-gray-400 text-md grid place-content-center h-[170px]     py-6 px-4   shadow-xl rounded-2xl  border-[1px] hover:border-2 hover:shadow-inner min-w-[280px] max-w-[520px]  relative -top-2 eee ${box.color}  flex-1`}
+                          className={`text-gray-400 text-md grid place-content-center h-[150px]     py-6 px-4   shadow-xl rounded-2xl  border-[1px] hover:border-2 hover:shadow-inner min-w-[180px] max-w-[320px]  relative -top-2 eee ${box.color}  flex-1`}
                         >
                           <p
                             className={`text-md text-gray-100 mb-2 mt-2 mine2 whitespace-nowrap ${
