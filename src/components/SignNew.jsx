@@ -91,7 +91,7 @@ export default function SignNew() {
           >
             <motion.div className="w-[180px] gradient" variants={textVariants}>
               <motion.img
-                src="../src/assets/hero-2.png"
+                src="../../assets/hero-2.png"
                 alt="logo"
                 variants={textVariants}
               />
