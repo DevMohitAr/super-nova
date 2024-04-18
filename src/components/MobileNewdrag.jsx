@@ -21,7 +21,7 @@ export const MobileNewdrag = ({
 const {setMobSel,mobSel} = useGlobal()
 
   return (
-    <section className="hero1  h-screen w-screen overflow-auto">
+    <section className="hero1  h-screen w-screen overflow-auto mohh">
       <main className=" h-full w-full  ">
         <div className="absolute z-30 top-2 left-2">
           <Link to="/login" className=" text-zinc-100 text-2xl  ">
