@@ -118,7 +118,7 @@ export const Newdrag = ({
               <div className="h-full relative">
                 <div
                   id="bottomBox"
-                  className=" eee3 w-[320px]  text-gray-50 border-2 border-gray-700 flex flex-col gap-8 py-8 px-4    shadow-xl h-full relative  "
+                  className=" eee3 w-[180px]  text-gray-50 border-2 border-gray-700 flex flex-col gap-8 py-8 px-4    shadow-xl h-full relative  "
                   onDragOver={handleDragOver}
                   onDrop={(e) => handleDrop(e, "bottomBox")}
                 >
@@ -309,7 +309,7 @@ export const Newdrag = ({
                               className={`text-gray-400 text-md grid place-content-center h-[150px]     py-6 px-4   shadow-xl rounded-2xl  border-[1px] hover:border-2 hover:shadow-inner min-w-[180px] max-w-[320px]   relative -top-2 eee ${box.color} flex-1   `}
                             >
                               <p
-                                className={`text-md text-gray-100 mb-2 mt-2 mine2 whitespace-nowrap ${
+                                className={`text-md text-gray-100 mb-2 mt-2 mine2 text-center ${
                                   box.id === hoverBox ? "hidden" : "block"
                                 }`}
                               >
@@ -364,7 +364,7 @@ export const Newdrag = ({
                           className={`text-gray-400 text-md grid place-content-center h-[150px]     py-6 px-4   shadow-xl rounded-2xl  border-[1px] hover:border-2 hover:shadow-inner min-w-[180px] max-w-[320px]  relative -top-2 eee ${box.color}  flex-1`}
                         >
                           <p
-                            className={`text-md text-gray-100 mb-2 mt-2 mine2 whitespace-nowrap ${
+                            className={`text-md text-gray-100 mb-2 mt-2 mine2 text-center ${
                               box.id === hoverBox ? "hidden" : "block"
                             }`}
                           >
