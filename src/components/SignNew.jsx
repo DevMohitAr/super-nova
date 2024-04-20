@@ -115,7 +115,7 @@ export default function SignNew() {
               Driving the Future of Business Intelligence{" "}
             </motion.h1>
             <h2 className="text-xl italic font-semibold custom-font1 md:text-xl ">
-              Powered By Ai
+              Powered By AI
             </h2>
             <motion.p className="text-2xl mb-7" variants={headVariants}>
               {/* Harness The Power of Data, With our Domain-Specific AI agents{" "} */}
