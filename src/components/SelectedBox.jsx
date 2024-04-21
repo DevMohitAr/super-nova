@@ -134,7 +134,7 @@ export default function SelectedBox({ bottomBoxContent, name }) {
                 src={
                   selectedBox === "chat" || selectedBox === "email"
                     ? `https://chatapp-9694f.web.app/#/${selectedBox}`
-                    : "https://consult-ai.co"
+                    : "https://consult-ai.co/chat/ahmed"
                 }
               />
             ) : (
